@@ -56,12 +56,16 @@ getPhotos().then(photos => {
 })
 window.addEventListener("load", () => {
   for (let i = 0; i < items.length; i++) {
-      if(i < 5) {
+      if (i===2) {
+        items[i].style.width = `30rem`
+        items[i].style.top = `25%`
+        items[i].style.zIndex = '100'
+      } else if(i < 5) {
         items[i].style.width = `${randomNumber(20, 26)}rem`
         items[i].style.top = `${randomNumber(12, 70)}%`
         items[i].style.zIndex = `${Math.floor(randomNumber(50, 70))}`
-      } else if ( 4 < i && i < 13 ) {
-        items[i].style.width = `${randomNumber(14, 18)}rem`
+      } else if ( 4 < i && i < 14 ) {
+        items[i].style.width = `${randomNumber(13, 18)}rem`
         items[i].style.top = `${randomNumber(12, 55)}%`
         items[i].style.zIndex = `${Math.floor(randomNumber(50, 70))}`
       } else if ( 31 < i && i < 38 ) {
@@ -77,7 +81,8 @@ window.addEventListener("load", () => {
         items[i].style.top = `${randomNumber(20, 55)}%`
         items[i].style.zIndex = `${Math.floor(randomNumber(10, 49))}`
       }
-      items[i].style.left = `${randomNumber(gField / 6, gField * 8)}px`
+
+      i === 2 ? items[i].style.left = '40%' : items[i].style.left = `${randomNumber(gField / 6, gField * 8)}px`
       items[i].childNodes[1].style.padding = `${randomNumber(3, 12)}px`
 
       let startx;
