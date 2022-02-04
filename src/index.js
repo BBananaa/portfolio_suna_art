@@ -82,7 +82,7 @@ window.addEventListener("load", () => {
         items[i].style.zIndex = `${Math.floor(randomNumber(10, 49))}`
       }
 
-      i === 2 ? items[i].style.left = '40%' : items[i].style.left = `${randomNumber(gField / 6, gField * 8)}px`
+      i === 2 ? items[i].style.left = '50%' : items[i].style.left = `${randomNumber(gField / 6, gField * 8)}px`
       items[i].childNodes[1].style.padding = `${randomNumber(3, 12)}px`
 
       let startx;
