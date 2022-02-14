@@ -99,10 +99,10 @@ window.addEventListener("load", () => {
   
       headerGallery.addEventListener("click", () => {
         clearInterval(moving)
-        return moving = setInterval(move, randomNumber(1, 30));
+        return moving = setInterval(move, randomNumber(2, 31));
       })
   
-      let moving = setInterval(move, randomNumber(1, 30));
+      let moving = setInterval(move, randomNumber(2, 31));
   
       function move() {
         boundaryL = items.every(item => {
